@@ -1,0 +1,1 @@
+sudo rm -f basic_wep.cap-0* > /dev/null

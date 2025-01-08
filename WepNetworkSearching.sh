@@ -1,0 +1,1 @@
+sudo airodump-ng $1 -a --encrypt WEP -o csv -w networks.temp -I 1 > /dev/null

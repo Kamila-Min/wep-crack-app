@@ -1,0 +1,1 @@
+sudo airmon-ng start $1 > /dev/null

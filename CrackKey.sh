@@ -1,0 +1,1 @@
+sudo aircrack-ng -z basic_wep.cap-01.cap -l key.log > /dev/null

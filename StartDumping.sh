@@ -1,0 +1,1 @@
+sudo airodump-ng --bssid $1 --channel $2 --write basic_wep.cap $3 -I 1 > /dev/null

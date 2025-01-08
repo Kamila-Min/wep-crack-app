@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum scale=1.0"
+    />
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>WEP Crack App</title>
+    <link rel="stylesheet" type="text/css" href="src/index.css">
+</head>
+
+<body class="start-page">
+    <span class="start-page__header">WEP Crack App</span>
+
+    <div class="start-page__button-wrapper">
+        <div class="start-page__button" id="startButton">
+            Start!
+        </div>
+    </div>
+
+    <div class="start-page__message-wrapper"></div>
+
+    <div class="dino-wrapper">
+        <img src="/public/assets/images/dino.webp" class="dino-wrapper__img" width="200" height="200">
+        <img src="/public/assets/images/dino.webp" class="dino-wrapper__img" width="200" height="200">
+        <img src="/public/assets/images/dino.webp" class="dino-wrapper__img" width="200" height="200">
+    </div>
+
+    <script>
+        let startButton = document.querySelector('.start-page__button')
+        startButton.addEventListener("click", crack)
+
+        async function crack(){
+            await eel.web_crack()
+        }
+
+        startButton.addEventListener("click", function() {
+            let messageWrapper = document.querySelector('.start-page__message-wrapper');
+            messageWrapper.className = "start-page__message-wrapper";
+
+            let waitingMessage = document.createElement('div');
+            waitingMessage.className = "start-page__message";
+            waitingMessage.innerHTML = "Please, wait a bit...";
+
+            messageWrapper.append(waitingMessage);
+        }
+
+        )
+
+        document.getElementById("startButton").addEventListener("click", function() {
+            window.open("http://localhost:8000/src/find-nets-page.html", "_self")
+        })
+    </script>
+
+</body>
+</html>

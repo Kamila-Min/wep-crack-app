@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum scale=1.0"
+    />
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>WEP Crack App</title>
+    <link rel="stylesheet" type="text/css" href="/src/index.css">
+</head>
+
+<body class="find-nets-page">
+
+    <div class="find-nets-page__buttons-wrapper">
+        <div class="find-nets-page__backbutton" id="backButton">
+            go back
+        </div>
+        <div class="find-nets-page__searchbutton" id="searchButton">
+            get the list of nets
+        </div>
+    </div>
+
+    <div class="find-nets-page__header-wrapper">
+        
+    </div>
+
+    <ul class="nets-list" id="nets-list">
+
+    </ul>
+
+    <script>
+        let backButton = document.querySelector('.find-nets-page__button')
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        })
+
+        let searchButton = document.querySelector('.find-nets-page__searchbutton')
+        document.getElementById("searchButton").addEventListener("click", function() {
+            let messageWrapper = document.querySelector('.find-nets-page__header-wrapper');
+            messageWrapper.className = "find-nets-page__header-wrapper";
+
+            let waitingMessage = document.createElement('div');
+            waitingMessage.className = "find-nets-page__header";
+            waitingMessage.innerHTML = "the nearest nets are here...";
+
+            messageWrapper.append(waitingMessage);
+
+            eel.get_list()(function(data) {
+            const listElement = document.getElementById('nets-list');
+            
+            listElement.innerHTML = '';
+
+            //динамически добавляем элементы на страницу перебором, делаем выделение с выбором
+                data.forEach(function(net, index) {
+                const li = document.createElement('li');
+                li.className = "nets-list__item";
+                li.textContent = net;
+                li.setAttribute('data-net', net);
+
+                li.addEventListener('click', function() {
+                    const selectedItem = document.querySelector('li.selected');
+                    if (selectedItem) {
+                        selectedItem.classList.remove('selected');
+                    }
+
+                    li.classList.add('selected');
+                });
+
+                listElement.appendChild(li);
+            });
+        });
+
+        })
+
+        //отправляем данные функции в python
+        function sendSelection() {
+            const selectedItem = document.querySelector('li.selected');
+            if (selectedItem) {
+                const selectedNet = selectedItem.getAttribute('data-net');
+                eel.get_select_nets(selectedNet);
+            } else {
+                alert('Please select a net');
+            }
+        }      
+    </script>
+
+    <div class="find-nets-page__text">choose the apropriate 😎</div>  <!-- возможно придется делать отложенное событие -->
+    
+    <div class="find-nets-page__huckbutton-wrapper">
+        <div class="find-nets-page__huckbutton" id="huckButton">
+            Huck!
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.querySelector('.find-nets-page__huckbutton')
+            button.addEventListener('click', sendSelection);
+        });
+
+        document.getElementById("huckButton").addEventListener("click", function() {
+            window.open("http://localhost:8000/src/magic-page.html", "_self")
+        })
+    </script>
+
+</body>
+</html>

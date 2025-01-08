@@ -1,0 +1,63 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+.start-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.start-page__header {
+    font-size: 70px;
+    font-family: "Muller Trial ExtraBold", sans-serif;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-page__button-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 15%;
+}
+
+.start-page__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 20px;
+    font-family: "Muller Trial Medium", sans-serif;
+    font-size: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px;
+}
+
+.start-page__button:hover {
+    background-color: black; /* Фон при наведении */
+    color: white; /* Цвет текста при наведении */
+    cursor: pointer;
+}
+
+.start-page__message-wrapper {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    font-family: "Muller Trial ExtraBold", sans-serif;
+}
+
+.start-page__message {
+    margin-left: 14%;
+    font-size: 40px;
+}

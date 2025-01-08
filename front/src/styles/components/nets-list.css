@@ -1,0 +1,30 @@
+.nets-list {
+    list-style-type:none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    gap: 5px;
+    padding: 0;
+    margin-bottom:20px;
+    margin-left: 5%;
+}
+
+.nets-list__item {
+    font-family: "Muller Trial Medium", sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    width: 82%;
+    border-radius: 20px;
+}
+
+.nets-list__item:hover {
+    background-color: rgb(117, 117, 117);
+    color: white; 
+    cursor: pointer;
+}
+
+.nets-list__item.selected {
+    background-color: black;
+    color: white;
+}

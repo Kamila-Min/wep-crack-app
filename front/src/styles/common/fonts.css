@@ -1,0 +1,53 @@
+@font-face {
+	font-family: "Muller Trial Bold";
+	src: url('/public/assets/fonts/Muller-Trial-Bold.eot');
+	src: url('/public/assets/fonts/Muller-Trial-Bold.eot?#iefix') format('embedded-opentype'),
+	url('/public/assets/fonts/Muller-Trial-Bold.woff2') format('woff2'),
+	url('/public/assets/fonts/Muller-Trial-Bold.woff') format('woff'),
+	url('/public/assets/fonts/Muller-Trial-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Muller Trial ExtraBold";
+	src: url('/public/assets/fonts/Muller-Trial-ExtraBold.eot');
+	src: url('/public/assets/fonts/Muller-Trial-ExtraBold.eot?#iefix') format('embedded-opentype'),
+	url('/public/assets/fonts/Muller-Trial-ExtraBold.woff2') format('woff2'),
+	url('/public/assets/fonts/Muller-Trial-ExtraBold.woff') format('woff'),
+	url('/public/assets/fonts/Muller-Trial-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Muller Trial Hairline";
+	src: url('/public/assets/fonts/Muller-Trial-Hairline.eot');
+	src: url('/public/assets/fonts/Muller-Trial-Hairline.eot?#iefix') format('embedded-opentype'),
+	url('/public/assets/fonts/Muller-Trial-Hairline.woff2') format('woff2'),
+	url('/public/assets/fonts/Muller-Trial-Hairline.woff') format('woff'),
+	url('/public/assets/fonts/Muller-Trial-Hairline.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Muller Trial Heavy";
+	src: url('/public/assets/fonts/Muller-Trial-Heavy.eot');
+	src: url('/public/assets/fonts/Muller-Trial-Heavy.eot?#iefix') format('embedded-opentype'),
+	url('/public/assets/fonts/Muller-Trial-Heavy.woff2') format('woff2'),
+	url('/public/assets/fonts/Muller-Trial-Heavy.woff') format('woff'),
+	url('/public/assets/fonts/Muller-Trial-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Muller Trial Medium";
+	src: url('/public/assets/fonts/Muller-Trial-Medium.eot');
+	src: url('/public/assets/fonts/Muller-Trial-Medium.eot?#iefix') format('embedded-opentype'),
+	url('/public/assets/fonts/Muller-Trial-Medium.woff2') format('woff2'),
+	url('/public/assets/fonts/Muller-Trial-Medium.woff') format('woff'),
+	url('/public/assets/fonts/Muller-Trial-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Muller Trial Thin";
+	src: url('/public/assets/fonts/Muller-Trial-Thin.eot');
+	src: url('/public/assets/fonts/Muller-Trial-Thin.eot?#iefix') format('embedded-opentype'),
+	url('/public/assets/fonts/Muller-Trial-Thin.woff2') format('woff2'),
+	url('/public/assets/fonts/Muller-Trial-Thin.woff') format('woff'),
+	url('/public/assets/fonts/Muller-Trial-Thin.ttf') format('truetype');
+}

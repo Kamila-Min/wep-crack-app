@@ -1,0 +1,103 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+.find-nets-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.find-nets-page__buttons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.find-nets-page__backbutton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-top: 30px;
+    padding: 20px;
+    font-family: "Muller Trial Medium", sans-serif;
+    font-size: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px;
+}
+
+.find-nets-page__backbutton:hover {
+    background-color: black; /* Фон при наведении */
+    color: white; /* Цвет текста при наведении */
+    cursor: pointer;
+}
+
+.find-nets-page__searchbutton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-top: 30px;
+    padding: 20px;
+    font-family: "Muller Trial Medium", sans-serif;
+    font-size: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px;
+}
+
+.find-nets-page__searchbutton:hover {
+    background-color: black; /* Фон при наведении */
+    color: white; /* Цвет текста при наведении */
+    cursor: pointer;
+}
+
+.find-nets-page__header-wrapper {
+    width: 100%;
+    height: 20%;
+}
+
+.find-nets-page__header {
+    font-size: 50px;
+    font-family: "Muller Trial ExtraBold", sans-serif;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.find-nets-page__text {
+    font-size: 50px;
+    margin-left: 5%;
+    font-family: "Muller Trial ExtraBold", sans-serif;
+    padding: 20px;
+    display: flex;
+    height: 10%;
+}
+
+.find-nets-page__huckbutton-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.find-nets-page__huckbutton {
+    font-family: "Muller Trial Medium", sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px;
+}
+
+.find-nets-page__huckbutton:hover {
+    background-color: black; /* Фон при наведении */
+    color: white; /* Цвет текста при наведении */
+    cursor: pointer;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum scale=1.0"
+    />
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>WEP Crack App</title>
+    <link rel="stylesheet" type="text/css" href="/src/index.css">
+</head>
+
+<body class="magic-page" onload="startProgress()">
+
+    <div class="magic-page__backbutton">
+        <div class="find-nets-page__backbutton" id="backButton">
+            go back
+        </div>
+    </div>
+
+    <script>
+        let backButton = document.querySelector('.find-nets-page__button')
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        })
+    </script>
+
+    <span class="magic-page__header">✨Magic is happening✨</span>
+
+    <div class="progress-field">
+        <div class="progress-container">
+            <div class="progress-container__bar" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="magic-page__message-wrapper"></div>
+
+    <div class="net-info-wrapper"></div>
+
+    <script>
+        function startProgress() {
+            eel.send_progress();
+        }
+
+        function updateProgress(step, totalSteps) {
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = step + '%';
+        }
+
+        let messageWrapper = document.querySelector('.magic-page__message-wrapper');
+        messageWrapper.className = "magic-page__message-wrapper";
+
+        let waitingMessage = document.createElement('div');
+        waitingMessage.className = "magic-page__message";
+        waitingMessage.innerHTML = "Searching for the key...";
+
+        messageWrapper.append(waitingMessage);
+
+        
+        function finalUpdate(netName, key) {
+
+            
+            let netInfo = document.querySelector('.net-info-wrapper');
+            netInfo.className = "net-info-wrapper";
+
+            let netTitle = document.createElement('div');
+            netTitle.className = "net-info-wrapper__title";
+            netTitle.innerHTML = "SSID:";
+
+            let netTitleName = document.createElement('span');
+            netTitleName.className = "net-info-wrapper__title-name";
+            netTitleName.innerHTML = netName;
+
+            let netPassword = document.createElement('div');
+            netPassword.className = "net-info-wrapper__password";
+            netPassword.innerHTML = "Password:";
+
+            let netPasswordExpression = document.createElement('span');
+            netPasswordExpression.className = "net-info-wrapper__password-name";
+            netPasswordExpression.innerHTML = key;
+
+            netInfo.append(netTitle);
+            netTitle.append(netTitleName);
+
+            if (key == "") {
+                let message = document.createElement('div');
+                message.className = "net-info-wrapper__message";
+                message.innerHTML = "Oops...the key was not found";
+                netInfo.append(message);
+            } else {
+                let message = document.createElement('div');
+                message.className = "net-info-wrapper__message";
+                message.innerHTML = "Successfully!";
+                netInfo.append(netPassword);
+                netPassword.append(netPasswordExpression);
+                netInfo.append(message);
+            }
+        }
+
+        eel.expose(updateProgress);
+        eel.expose(finalUpdate);
+    </script>
+
+</body>
+</html>

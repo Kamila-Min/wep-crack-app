@@ -1,0 +1,1 @@
+sudo airmon-ng > adapters.txt

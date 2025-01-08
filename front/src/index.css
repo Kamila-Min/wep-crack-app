@@ -1,0 +1,9 @@
+@import "styles/common/fonts.css";
+@import "styles/common/palette.css";
+
+@import "styles/components/general-wrapper.css";
+@import "styles/components/dino-wrapper.css";
+@import "styles/components/find-nets-page.css";
+@import "styles/components/nets-list.css";
+@import "styles/components/magic-page.css";
+@import "styles/components/progress-bar.css";
